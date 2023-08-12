@@ -466,9 +466,9 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form  method="post" action="https://script.google.com/macros/s/AKfycbwGRRYneLUc9tPbcKNUli1FniQi4bOUHmsetxQ5U-p0ZUewLBObitFD61rYpVVQAE58/exec" class="bg-light p-4 p-md-5 contact-form needs-validation" target="form-iframe" novalidate>
-              	<iframe name="form-iframe" style="display: none;" frameborder="0"></iframe>
-		    <div class="form-group">
+            <form  method="post" action="https://script.google.com/macros/s/AKfycbyvx4JQFCuJF2ZL-LBIDMvakoRDvggWkRf2jE9d9onHRqIhElroCtNH7v2P2JApqjJuqA/exec" class="bg-light p-4 p-md-5 contact-form needs-validation" target="form-iframe" novalidate>
+				<iframe name="form-iframe" style="display: none;" frameborder="0"></iframe>
+              <div class="form-group">
                 <input type="text" name="Name" class="form-control" placeholder="Your Name" required>
 				<div class="invalid-feedback">Please enter your Name</div>
               </div>
@@ -557,6 +557,26 @@
           <!-- </div>
         </div> -->
       </div>
+
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="successModalLabel">Success!</h5>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  Your form has been successfully submitted.
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-primary" data-dismiss="modal"  onclick="alert('Sdasdasdasda')">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
     </footer>
     
   
@@ -597,9 +617,8 @@
             event.preventDefault()
             event.stopPropagation()
           }
-  
-         else{
-		showSuccess();
+		  else{
+			showSuccess();
 		  }
           form.classList.add('was-validated')
 		  
@@ -615,7 +634,6 @@
     	var bootstrapModal = new bootstrap.Modal(successModal); 
 		bootstrapModal.close()
 	  } ;
-      })
   })()
   </script>
     
