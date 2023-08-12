@@ -597,8 +597,23 @@
             event.stopPropagation()
           }
   
+         else{
+		showSuccess();
+		  }
           form.classList.add('was-validated')
+		  
         }, false)
+      })
+	  function showSuccess(){
+		var successModal = document.getElementById('successModal');
+    	var bootstrapModal = new bootstrap.Modal(successModal); 
+		bootstrapModal.show()
+	  } ;
+	  function closeSuccess(){
+		var successModal = document.getElementById('successModal');
+    	var bootstrapModal = new bootstrap.Modal(successModal); 
+		bootstrapModal.close()
+	  } ;
       })
   })()
   </script>
